@@ -15,6 +15,11 @@
 		DEFF9E621BBE1E2C00FB4E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEFF9E601BBE1E2C00FB4E9C /* LaunchScreen.storyboard */; };
 		DEFF9E6D1BBE1E2C00FB4E9C /* GirlEmpowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF9E6C1BBE1E2C00FB4E9C /* GirlEmpowerTests.swift */; };
 		DEFF9E781BBE1E2C00FB4E9C /* GirlEmpowerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF9E771BBE1E2C00FB4E9C /* GirlEmpowerUITests.swift */; };
+		DEFF9E861BBE1E8C00FB4E9C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF9E851BBE1E8C00FB4E9C /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		DEFF9E881BC0468E00FB4E9C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF9E871BC0468E00FB4E9C /* LocationManager.swift */; settings = {ASSET_TAGS = (); }; };
+		DEFF9E8A1BC0A60400FB4E9C /* TwitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF9E891BC0A60400FB4E9C /* TwitterManager.swift */; settings = {ASSET_TAGS = (); }; };
+		DEFF9E8C1BC184C900FB4E9C /* TwitterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF9E8B1BC184C900FB4E9C /* TwitterModel.swift */; settings = {ASSET_TAGS = (); }; };
+		DEFF9E8F1BC1C44900FB4E9C /* TwitterParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF9E8E1BC1C44900FB4E9C /* TwitterParser.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		DEFF9E731BBE1E2C00FB4E9C /* GirlEmpowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GirlEmpowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF9E771BBE1E2C00FB4E9C /* GirlEmpowerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlEmpowerUITests.swift; sourceTree = "<group>"; };
 		DEFF9E791BBE1E2C00FB4E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEFF9E851BBE1E8C00FB4E9C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DEFF9E871BC0468E00FB4E9C /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		DEFF9E891BC0A60400FB4E9C /* TwitterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterManager.swift; sourceTree = "<group>"; };
+		DEFF9E8B1BC184C900FB4E9C /* TwitterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterModel.swift; sourceTree = "<group>"; };
+		DEFF9E8E1BC1C44900FB4E9C /* TwitterParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +109,14 @@
 		DEFF9E531BBE1E2B00FB4E9C /* GirlEmpower */ = {
 			isa = PBXGroup;
 			children = (
+				DEFF9E8D1BC19F0700FB4E9C /* Twitter */,
 				DEFF9E541BBE1E2B00FB4E9C /* AppDelegate.swift */,
 				DEFF9E561BBE1E2B00FB4E9C /* ViewController.swift */,
+				DEFF9E851BBE1E8C00FB4E9C /* MapViewController.swift */,
+				DEFF9E8B1BC184C900FB4E9C /* TwitterModel.swift */,
+				DEFF9E871BC0468E00FB4E9C /* LocationManager.swift */,
+				DEFF9E891BC0A60400FB4E9C /* TwitterManager.swift */,
+				DEFF9E8E1BC1C44900FB4E9C /* TwitterParser.swift */,
 				DEFF9E581BBE1E2B00FB4E9C /* Main.storyboard */,
 				DEFF9E5E1BBE1E2C00FB4E9C /* Assets.xcassets */,
 				DEFF9E601BBE1E2C00FB4E9C /* LaunchScreen.storyboard */,
@@ -126,6 +142,13 @@
 				DEFF9E791BBE1E2C00FB4E9C /* Info.plist */,
 			);
 			path = GirlEmpowerUITests;
+			sourceTree = "<group>";
+		};
+		DEFF9E8D1BC19F0700FB4E9C /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Twitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEFF9E571BBE1E2B00FB4E9C /* ViewController.swift in Sources */,
+				DEFF9E8A1BC0A60400FB4E9C /* TwitterManager.swift in Sources */,
+				DEFF9E8C1BC184C900FB4E9C /* TwitterModel.swift in Sources */,
 				DEFF9E551BBE1E2B00FB4E9C /* AppDelegate.swift in Sources */,
+				DEFF9E881BC0468E00FB4E9C /* LocationManager.swift in Sources */,
 				DEFF9E5D1BBE1E2C00FB4E9C /* GirlEmpower.xcdatamodeld in Sources */,
+				DEFF9E8F1BC1C44900FB4E9C /* TwitterParser.swift in Sources */,
+				DEFF9E861BBE1E8C00FB4E9C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
