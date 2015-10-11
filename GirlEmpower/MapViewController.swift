@@ -23,7 +23,8 @@ class MapViewController: UIViewController {
         
         twit.getTimeline("acavanagh") { (tweets, error) -> Void in
             
-            
+            // first check error ... do something if error is not nil
+            // else show some tweets
             
         }
     

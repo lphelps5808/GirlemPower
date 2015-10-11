@@ -13,7 +13,7 @@ import Accounts
 
 private let kTwitterTimelineEndpoint = "https://api.twitter.com/1.1/statuses/user_timeline.json"
 
-typealias TwitterCompletionHandler = (tweet: Void?, error: NSError?) -> Void
+typealias TwitterCompletionHandler = (tweets: [Tweet]?, error: NSError?) -> Void
 
 class TwitterManager {
     
@@ -38,15 +38,28 @@ class TwitterManager {
                 let postRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: url, parameters: params)
                 postRequest.account = account as! ACAccount
                 postRequest.performRequestWithHandler { (data, response, error) -> Void in
+                    // FIXME: - Error Handling!!
                     
-                    let json = try! NSJSONSerialization.JSONObjectWithData(data, options: []) as! [AnyObject]
+                    var returnError: NSError?
+                    var returnTweets: [Tweet]?
                     
-                    print(json)
+                    if error == nil {
+                        do {
+                            if let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [AnyObject] {
+                                returnTweets = TweetParser.parse(json)
+                            }
+                        } catch (_) {
+                            // FIXME: - Error Handling!
+                            let jError = NSError(domain: "com.blah", code: 9, userInfo: nil)
+                            returnError = jError
+                        }
+                    } else {
+                        returnError = error
+                    }
                     
-                    let tweets = TweetParser.parse(json)
-                    
-                    
-                    //completion()
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        completion(tweets: returnTweets, error: returnError)
+                    })
                     
                 }
             }
