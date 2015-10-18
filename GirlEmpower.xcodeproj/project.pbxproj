@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		966D4634A152467241240723 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F971A9D709D79514D7C5F1C /* Pods.framework */; };
+		DE167E951BCB0181006B208E /* memberOfCongressParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE167E941BCB0181006B208E /* memberOfCongressParser.swift */; settings = {ASSET_TAGS = (); }; };
+		DE167E971BCB0195006B208E /* memberofCongressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE167E961BCB0195006B208E /* memberofCongressModel.swift */; settings = {ASSET_TAGS = (); }; };
 		DEFF9E551BBE1E2B00FB4E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF9E541BBE1E2B00FB4E9C /* AppDelegate.swift */; };
 		DEFF9E571BBE1E2B00FB4E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF9E561BBE1E2B00FB4E9C /* ViewController.swift */; };
 		DEFF9E5A1BBE1E2B00FB4E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEFF9E581BBE1E2B00FB4E9C /* Main.storyboard */; };
@@ -39,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F971A9D709D79514D7C5F1C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD552BA0489141BE6DD8463 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		ACA0A7BA0C948EF563D26BDA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DE167E941BCB0181006B208E /* memberOfCongressParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memberOfCongressParser.swift; sourceTree = "<group>"; };
+		DE167E961BCB0195006B208E /* memberofCongressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memberofCongressModel.swift; sourceTree = "<group>"; };
 		DEFF9E511BBE1E2B00FB4E9C /* GirlEmpower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GirlEmpower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF9E541BBE1E2B00FB4E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF9E561BBE1E2B00FB4E9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966D4634A152467241240723 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D0821BD8DBE33E000C10D60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACA0A7BA0C948EF563D26BDA /* Pods.debug.xcconfig */,
+				5BD552BA0489141BE6DD8463 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE2F766F9F8B4A28EAD1DF72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F971A9D709D79514D7C5F1C /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DEFF9E481BBE1E2B00FB4E9C = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +117,8 @@
 				DEFF9E6B1BBE1E2C00FB4E9C /* GirlEmpowerTests */,
 				DEFF9E761BBE1E2C00FB4E9C /* GirlEmpowerUITests */,
 				DEFF9E521BBE1E2B00FB4E9C /* Products */,
+				5D0821BD8DBE33E000C10D60 /* Pods */,
+				CE2F766F9F8B4A28EAD1DF72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +140,8 @@
 				DEFF9E561BBE1E2B00FB4E9C /* ViewController.swift */,
 				DEFF9E851BBE1E8C00FB4E9C /* MapViewController.swift */,
 				DEFF9E8B1BC184C900FB4E9C /* TwitterModel.swift */,
+				DE167E941BCB0181006B208E /* memberOfCongressParser.swift */,
+				DE167E961BCB0195006B208E /* memberofCongressModel.swift */,
 				DEFF9E871BC0468E00FB4E9C /* LocationManager.swift */,
 				DEFF9E891BC0A60400FB4E9C /* TwitterManager.swift */,
 				DEFF9E581BBE1E2B00FB4E9C /* Main.storyboard */,
@@ -155,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEFF9E7C1BBE1E2C00FB4E9C /* Build configuration list for PBXNativeTarget "GirlEmpower" */;
 			buildPhases = (
+				25EC388160590A218E18EA68 /* Check Pods Manifest.lock */,
 				DEFF9E4D1BBE1E2B00FB4E9C /* Sources */,
 				DEFF9E4E1BBE1E2B00FB4E9C /* Frameworks */,
 				DEFF9E4F1BBE1E2B00FB4E9C /* Resources */,
+				9B33CB82A87BC46D7C705E9C /* Embed Pods Frameworks */,
+				A51EA8014E42436F9EC60121 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +306,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25EC388160590A218E18EA68 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B33CB82A87BC46D7C705E9C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A51EA8014E42436F9EC60121 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DEFF9E4D1BBE1E2B00FB4E9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -282,7 +363,9 @@
 				DEFF9E8A1BC0A60400FB4E9C /* TwitterManager.swift in Sources */,
 				DEFF9E8C1BC184C900FB4E9C /* TwitterModel.swift in Sources */,
 				DEFF9E551BBE1E2B00FB4E9C /* AppDelegate.swift in Sources */,
+				DE167E971BCB0195006B208E /* memberofCongressModel.swift in Sources */,
 				DEFF9E881BC0468E00FB4E9C /* LocationManager.swift in Sources */,
+				DE167E951BCB0181006B208E /* memberOfCongressParser.swift in Sources */,
 				DEFF9E5D1BBE1E2C00FB4E9C /* GirlEmpower.xcdatamodeld in Sources */,
 				DEFF9E861BBE1E8C00FB4E9C /* MapViewController.swift in Sources */,
 			);
@@ -424,6 +507,7 @@
 		};
 		DEFF9E7D1BBE1E2C00FB4E9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACA0A7BA0C948EF563D26BDA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GirlEmpower/Info.plist;
@@ -435,6 +519,7 @@
 		};
 		DEFF9E7E1BBE1E2C00FB4E9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD552BA0489141BE6DD8463 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GirlEmpower/Info.plist;
@@ -511,6 +596,7 @@
 				DEFF9E7E1BBE1E2C00FB4E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEFF9E7F1BBE1E2C00FB4E9C /* Build configuration list for PBXNativeTarget "GirlEmpowerTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +605,7 @@
 				DEFF9E811BBE1E2C00FB4E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEFF9E821BBE1E2C00FB4E9C /* Build configuration list for PBXNativeTarget "GirlEmpowerUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +614,7 @@
 				DEFF9E841BBE1E2C00FB4E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

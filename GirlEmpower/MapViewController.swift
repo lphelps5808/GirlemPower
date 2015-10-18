@@ -13,6 +13,9 @@ import MapKit
 class MapViewController: UIViewController {
     
     let twit = TwitterManager()
+    
+    let members = memberOfCongressParser()
+    
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -20,21 +23,52 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        twit.getTimeline("acavanagh") { (tweets, error) -> Void in
+        members.pullGovTrackData { (returnMembers, returnError) -> Void in
             
-            // first check error ... do something if error is not nil
-            // else show some tweets
+            if let members = returnMembers where returnError == nil {
+                
+                
+                let fMems = members.filter({ (member) -> Bool in
+                    if member.gender == "female" {
+                        return true
+                    } else {
+                        return false
+                    }
+                })
+                
+                print(fMems)
+                
+            }
             
         }
+        
+        
+        print("LULZ I AM HAPPENING FIRST!")
+        
+//        
+//        twit.getTimeline("lphelps09") { (tweets, error) -> Void in
+//            
+//            
+//            if let tweets = tweets where error == nil {
+//                for tweet in tweets {
+//                    print(tweet)
+//                }
+//            }
+//            
+//            
+//            
+//            // first check error ... do something if error is not nil
+//            // else show some tweets
+//            
+//        }
     
         NSNotificationCenter.defaultCenter().addObserverForName(DidUpdateLocationNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (note) -> Void in
-            print(note)
+            //print(note)
         }
         
         
         LocationManager.currentLocation { (location, error) -> Void in
-            print(location)
+            //print(location)
         }
         
     }

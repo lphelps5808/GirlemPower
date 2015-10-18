@@ -48,8 +48,6 @@ struct TweetParser {
                     profile_image_url: parsedTweetObj["user"]?["profile_image_url"] as? String
                 )
                 
-                print(tweet)
-                
                 tweetsArray.append(tweet)
                
             }
